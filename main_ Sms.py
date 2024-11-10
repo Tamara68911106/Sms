@@ -13,9 +13,9 @@ def load(): # загрузка
     try:
         with open('save.txt', 'r') as file:
             info=file.readlines() # содержит инфо, читаем все строки и загружаем все
-            sender_email_entry.insert(0, info[0])
-            recipient_email_entry.insert(0, info[1])
-            password_entry.insert(0,info[2])
+            sender_email_entry.insert(0, info[0]. strip())
+            recipient_email_entry.insert(0, info[1].strip())
+            password_entry.insert(0,info[2].strip())
     except FileNotFoundError:
         pass # после первого запуска программы ошибки не будет, т.к есть pass - ошибка проскользит
 
